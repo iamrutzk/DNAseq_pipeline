@@ -5,7 +5,7 @@ This project analyzes lung adenocarcinoma (ADC) and squamous cell carcinoma (SCC
 
 Table of Contents:
 
-Run these step by step:
+Run these step by step (bash):
 
 1. Raw Data Download  
 2. Reference Genome Preparation  
