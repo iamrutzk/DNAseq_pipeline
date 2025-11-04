@@ -1,26 +1,42 @@
 
 # DNAseq Analysis
 
-This project analyzes lung adenocarcinoma (ADC) and squamous cell carcinoma (SCC) using NGS data to identify somatic and germline variants. Key steps include quality control (FastQC, fastp), alignment (BWA), variant calling (GATK), and annotation (Ensembl VEP). Findings reveal recurrent TRBV mutations in SCC (immune modulation), a germline PTCH2 variant in ADC (Hedgehog pathway), and subtype-specific *GPRIN2/3* germline variants in SCC. The study highlights molecular heterogeneity, proposes potential biomarkers, and demonstrates population-specific insights for precision oncology. The workflow integrates bioinformatics pipelines with translational research, aiding targeted therapy development.
+# Key Features
 
-Table of Contents:
+Cancer Types: Lung adenocarcinoma (ADC), squamous cell carcinoma (SCC)
+
+Variants Detected: Germline and somatic (GATK HaplotypeCaller, Mutect2)
+
+Annotation: Ensembl VEP for biological interpretation (SIFT, PolyPhen)
+
+Findings: TRBV mutations in SCC, germline PTCH2 in ADC, subtype-specific GPRIN2/3 in SCC
+
+Bioinformatics Integration: Workflow enables translational research for targeted therapies and population-specific insights.
+
+# Table of Contents:
 
 Run these step by step:
 
-1. Raw Data Download  
-2. Reference Genome Preparation  
-3. Quality Control Analysis  
-4. Read Trimming and Filtering  
-5. Sequence Alignment  
-6. File Format Conversion  
-7. Duplicate Removal  
-8. Variant Calling  
-9. Variant Filtering  
-10. Variant Annotation  
-11. Data Visualization  
-12. Structural Variant Analysis
+1. Raw data Download :
+    - [Normal Sample](#normal-sample)
+    - [Squamous Cell Carcinoma (SCC)](#squamous-cell-carcinoma-scc)
+    - [Adenocarcinoma](#adenocarcinoma)
+2. Reference Genome Preparation : - [Ref Genome](#ref-genome)
+3. Quality Control Analysis : - [Run FastQC on Raw Data](#run-fastqc-on-raw-data)
+5. Read Trimming and Filtering :
+    - [Normal](#normal)
+    - [SCC](#scc)
+    - [Adenocarcinoma](#adenocarcinoma-1) 
+7. Sequence Alignment  
+8. File Format Conversion  
+9. Duplicate Removal  
+10. Variant Calling  
+11. Variant Filtering  
+12. Variant Annotation  
+13. Data Visualization  
+14. Structural Variant Analysis
 
-DNAseq Pipeline for Lung Cancer Variant Analysis:
+# DNAseq Pipeline for Lung Cancer Variant Analysis:
 
 This database is taken for a lung cancer patients, suffering from different type of cancer associated with
 lungs cancer. The data was downloaded using NCBI SRA: https://www.ncbi.nlm.nih.gov/sra
@@ -198,4 +214,11 @@ BreakDancer detected larger genomic alterations. Both deletions and amplificatio
 # Example for SCC
 BreakDancer-Max -g genome.fa -o output_breakdancer.txt reheader.rmdup.sort.SRR20761711.bam
 ```  
+# Output Data
+Variant Files: Filtered VCFs (germline/somatic)
 
+QC Reports: FastQC and fastp HTML reports
+
+Annotated Variants: VEP output files (SIFT, PolyPhen, clinical context)
+
+Visual Evidence: IGV screenshot records
