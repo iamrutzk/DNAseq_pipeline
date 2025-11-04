@@ -1,0 +1,18 @@
+# Workflow of DNA sequencing 
+
+1. Raw Data in “Fastq” format
+2. Quality Check using “Fastqc”
+3. Mapping Genes on Reference Genome using “Bwa” tool
+4. SAM tools to convert into BAM file
+5. Sorted BAM file
+6. Remove the duplicates using “Picard-tools”
+7. Mutation or Variant calling using “GATK” program
+8. GATK “Haplotype-Caller”(Germline) and GATK “Mutect2”(Somatic)
+9. Functional prediction of genetic variants using “SnpEff or SnpSift”
+10. Convert it into VCF format
+11. Filter the mutation based on Depth and Mapping quality
+12. Final variation and Annotation using Ensembl (web based)
+13. Variation Visualization “Using IGV”
+14. Data Interpretation using “Breakdancer”
+
+Final report is based on potential mutation strains, which are non-synonyms and causing the disease.
