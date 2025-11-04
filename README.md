@@ -22,6 +22,9 @@ Run these step by step:
 
 DNAseq Pipeline for Lung Cancer Variant Analysis:
 
+This database is taken for a lung cancer patients, suffering from different type of cancer associated with
+lungs cancer. The data was downloaded using NCBI SRA: https://www.ncbi.nlm.nih.gov/sra
+
 1. Download Raw Data (FASTQ) from NCBI SRA
 The FASTQ files were downloaded from NCBI SRA database. Both tumor and normal samples were acquired for comparison. The data included squamous cell carcinoma and adenocarcinoma subtypes. The download was performed using wget command with resume capability. Proper file naming conventions were maintained throughout.
 
