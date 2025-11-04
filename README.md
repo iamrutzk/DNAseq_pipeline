@@ -26,15 +26,31 @@ Run these step by step:
 5. Read Trimming and Filtering :
     - [Normal](#normal)
     - [SCC](#scc)
-    - [Adenocarcinoma](#adenocarcinoma-1) 
-7. Sequence Alignment  
-8. File Format Conversion  
-9. Duplicate Removal  
-10. Variant Calling  
-11. Variant Filtering  
-12. Variant Annotation  
-13. Data Visualization  
-14. Structural Variant Analysis
+    - [Adenocarcinoma](#adenocarcinoma-1)
+5. Run FASTQC : - [Re-run FastQC on Trimmed Data](#re-run-fastqc-on-trimmed-data)
+7. Sequence Alignment
+    - [Index Reference Genome](#index-reference-genome)
+    - [Align Reads](#align-reads)
+9. File Format Conversion :
+    - [Normal](#normal-1)
+    - [SCC](#scc-1)
+    - [Adenocarcinoma](#adenocarcinoma-2) 
+11. Duplicate Removal
+    - [Normal](#normal-2)
+    - [SCC](#scc-2)
+    - [Adenocarcinoma](#adenocarcinoma-3)
+13. Variant Calling : - [Variant Calling (GATK)](#variant-calling-gatk)
+    - [Download Resources for Mutect2](#download-required-resources-for-mutect2)
+    - [Germline Variants (HaplotypeCaller)](#germline-variants-haplotypecaller)
+    - [Somatic Variants (Mutect2)](#somatic-variants-mutect2) 
+14. Variant Filtering : - [Variant Filtering (SnpSift)](#variant-filtering-snpsift)
+    - [Germline Variants](#germline-variants)
+    - [Somatic Variants](#somatic-variants) 
+15. Variant Annotation : - [Variant Annotation (Ensembl VEP)](#variant-annotation-ensembl-vep)
+16. Data Visualization : - [Data Visualization (IGV)](#data-visualization-igv)
+    - [Load BAM and VCF Files into IGV](#load-bam-and-vcf-files-into-igv-for-manual-inspection)
+17. Structural Variant Analysis : - [Structural Variant Analysis](#structural-variant-analysis-breakdancer)
+    - [Output Data](#output-data)
 
 # DNAseq Pipeline for Lung Cancer Variant Analysis:
 
